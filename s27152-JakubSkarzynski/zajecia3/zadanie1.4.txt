@@ -1,5 +1,8 @@
-#/bin/bash
+#!/bin/bash
 
-if [ $(ls | wc -l) -gt 5 ]; then
-        echo "W bieżącym katalogu jest więcej niż 5 plików"
+num_files=$(ls -1 | wc -l)
+
+# Sprawdzamy, czy liczba plików jest większa niż 5
+if [ $num_files -gt 5 ]; then
+    echo "W bieżącym katalogu jest więcej niż 5 plików."
 fi
