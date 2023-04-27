@@ -13,3 +13,10 @@ Temat jest przedstawiony w sposób zrozumiały i jasny.
 02.04.2023
 
 Na dzisiejszych zajęciach kontynuowany był temat skryptowania w BASHU. Pojawiły się nowe zagadanienia związane z pętlami, funkcjami, tablicami oraz regex. Nowością dla mnie były funkcje, szczególnie obsługa funkcji rekurencyjnych w BASHU, korzystając z return, która nie wygląda na najprostszą. Sądze, że to kwiestia praktyki bo zrozumieć jak działają one ze składnią w BASHU. Resztę rzeczy kojarzyłem oraz korzystałem z nich już wcześniej, więc nie mam z nimi problemu. Znajomość wyżej wymienionych tematów jest przydatna oraz ważna do poprawnego i optymalnego skryptowania. Temat przedstawiony został w sposób zrozumiały.
+
+
+22.04.2023
+
+Na dzisiejszych zajęciach pojawił się temat programowania w języku C oraz wstęp do niego. Styczność miałem z językiem z C++, jednak patrząc, wydaję się on kompletnie inny od C w tym o wiele bardziej upierdliwy. Na pierwszy rzut oka 
+wydaję się problematyczny, ale po zaznajomiemiu z zasadami oraz wykonaniu zadań staję się coraz bardziej przejrzysty. Wciąż nie wszystko do końca rozumiem, więc będe musiał temat jeszczę trochę przepracować. Zadania były dosyć 
+wymagające, ale robienie ich pozwala przyswoić wiedzę oraz sposób działania w C.
