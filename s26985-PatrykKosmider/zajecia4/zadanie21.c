@@ -8,6 +8,7 @@ int main(int argc, char* argv[]){
 		printf("%s", linia);
 	
 	}
+	fclose(plik);
 	return 0;
 }
 

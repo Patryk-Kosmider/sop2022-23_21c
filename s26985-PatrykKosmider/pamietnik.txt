@@ -20,3 +20,9 @@ Na dzisiejszych zajęciach kontynuowany był temat skryptowania w BASHU. Pojawi�
 Na dzisiejszych zajęciach pojawił się temat programowania w języku C oraz wstęp do niego. Styczność miałem z językiem z C++, jednak patrząc, wydaję się on kompletnie inny od C w tym o wiele bardziej upierdliwy. Na pierwszy rzut oka 
 wydaję się problematyczny, ale po zaznajomiemiu z zasadami oraz wykonaniu zadań staję się coraz bardziej przejrzysty. Wciąż nie wszystko do końca rozumiem, więc będe musiał temat jeszczę trochę przepracować. Zadania były dosyć 
 wymagające, ale robienie ich pozwala przyswoić wiedzę oraz sposób działania w C.
+
+06.05.2023
+
+Na dzisiejszych zajęciach pojawił się temat zarządzania oraz tworzenia procesów w języku C. Sam koncept forkowanie procesów nie wydaję się ciężki, jednak problemy pojawiają się przy próbie jego prawidłowej implementacji, szczególnie
+gdy dochodzi do tworzenia własnego drzewa procesów. Temat wymaga przećwiczenia i wykonaniu trochę zadań, by zrozumieć go i w przyszlości poprawnie z niego korzystać. Zadania są na odpowiednim poziomie nauki, a temat został przestawiony
+w sposób przystępny.

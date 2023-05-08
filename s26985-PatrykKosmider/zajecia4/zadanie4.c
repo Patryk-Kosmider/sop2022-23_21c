@@ -20,16 +20,15 @@ int suma(int a, int b){
 
 int main(){
 	int(*f[3])(int,int) = {max,min,suma};
-
+	int i = 0;
 	int functionId;
 	int elementCount;
+	int v;
+	int el;
 	printf("Podaj functionID: \n");
 	scanf("%d", &functionId);
 	printf("Podaj ilosc elementow: \n");
 	scanf("%d", &elementCount);
-	int i = 0;
-	int el;
-	int v;
 	scanf("%d",&v);;
 	while(i < elementCount - 1){
 		scanf("%d", &el);

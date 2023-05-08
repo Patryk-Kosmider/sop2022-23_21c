@@ -8,10 +8,10 @@ typedef struct wezel {
 }wezel;
 
 void Dane(wezel** lista){
-	printf("Podaj dane: \n");
 	int liczba;
+	wezel *noweDane =(wezel*)malloc(sizeof(wezel));
+	printf("Podaj dane: \n");
 	scanf("%d", &liczba);
-	wezel* noweDane =(wezel*)malloc(sizeof(wezel));
 	noweDane->dane = liczba;
 	noweDane->wezel2 = NULL;
 	if(*lista == NULL){
@@ -41,13 +41,36 @@ void wyswietldane(wezel* lista){
 }
 
 
+void usundane(wezel** lista, int dane){
+	wezel* usun = *lista;
+	wezel* dotylu = NULL;
+
+	while(usun->dane!=dane && usun!=NULL ){
+		dotylu = usun;
+		usun = usun->wezel2;
+	}
+
+	if(dotylu == NULL){
+		*lista = usun->wezel2;
+	} else {
+		dotylu->wezel2 = usun->wezel2;
+	}
+
+
+}
 
 int main(){
-	wezel* lista;
+	int usun;
+	wezel* lista = NULL;
 	Dane(&lista);
 	Dane(&lista);
 	Dane(&lista);
 	printf("Dane: \n");
+	wyswietldane(lista);
+	printf("Usun dane: \n");
+	scanf("%d", &usun);
+	usundane(&lista, usun);
+	printf("Dane po usunieciu: \n");
 	wyswietldane(lista);
 	return 0;
 

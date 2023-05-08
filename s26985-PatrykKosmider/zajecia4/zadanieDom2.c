@@ -10,13 +10,13 @@ typedef struct wezel{
 
 void poczatekDane(wezel** lista){
 	int liczba;
+	wezel* noweDane = (wezel*)malloc(sizeof(wezel));
+	wezel* poczatekwezel = *lista;
 	printf("Podaj dane: \n");
 	scanf("%d", &liczba);
-	wezel* noweDane = (wezel*)malloc(sizeof(wezel));
 	noweDane->wezelprzed = NULL;
 	noweDane->wezelpo = *lista;
 	noweDane->dane = liczba;
-	wezel* poczatekwezel = *lista;
 	if(poczatekwezel == NULL){
 		*lista = noweDane;
 
@@ -30,10 +30,10 @@ void poczatekDane(wezel** lista){
 
 
 void koniecDane(wezel** lista){
-	printf("Podaj dane: \n");
 	int liczba;
-	scanf("%d", &liczba);
 	wezel* noweDane = (wezel*)malloc(sizeof(wezel));
+	printf("Podaj dane: \n");
+	scanf("%d", &liczba);
 	noweDane->wezelprzed = NULL;
 	noweDane->wezelpo = NULL;
 	noweDane->dane = liczba;
@@ -63,15 +63,41 @@ void wyswietldane(wezel* lista){
 
 }
 
-int main(){
-	wezel* lista = NULL;
+void usundane(wezel** lista, int dane){
+	wezel* usun = *lista;
+	while(usun->dane!=dane && usun != NULL){
+		usun = usun->wezelpo;
+	}
+	wezel* przed = usun->wezelprzed;
+	wezel* po = usun->wezelpo;
+	if(po == NULL){
+		return;
+	} else {
+		po->wezelprzed = przed;
+	}
+	if(usun->wezelprzed == NULL){
+		*lista = po;
+	} else {
+		przed->wezelpo = po;
+	}
+}
 
+
+int main(){
+	int usun;
+	wezel* lista = NULL;
 	poczatekDane(&lista);
 	koniecDane(&lista);
 	poczatekDane(&lista);
 	poczatekDane(&lista);
 	printf("Dane: \n");
 	wyswietldane(lista);
+	printf("Usun dane: \n");
+	scanf("%d", &usun);
+	usundane(&lista, usun);
+	printf("Dane po usunieciu: \n");
+	wyswietldane(lista);
 	return 0;
+	
 }
 
