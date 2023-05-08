@@ -34,3 +34,16 @@ Na zajęciach prowadzący przedstawił jak działają pętle oraz ify w bashu, p
 Uważam że wyrażenia regularne sprawiają mi jeszcze kłopoty
 
 Zaskakujące było jak szybko grupa poszła do domu ;)
+
+04-05-2023
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+-podstaw składni C
+-lepiej zrozumiałem pointery
+-podstaw vim'a
+
+Na zajęciach porwadzący przedstawił język C posługując się Linuxem, wytłumaczył jak ręczenie kompilować kod oraz jak wygląda składnia C oraz pointery.
+
+Uważam że pointery sprawiają mi jeszcze kłopoty
+
+Zaskaujące było jak prowadzący przedstawił dosyć złożony program z obsługą plików
+
