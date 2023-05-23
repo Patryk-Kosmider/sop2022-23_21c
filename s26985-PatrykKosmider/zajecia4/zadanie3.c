@@ -17,8 +17,14 @@ int main(int argc, char *argv[]){
 		printf("Podaj sposob grupowania: \n");
 		scanf("%d", &group);
 		linia=malloc(sizeof(char) * group);
+		if(linia == NULL){
+			printf("Blad");
+			fclose(plik);
+			return 1;
+		}
         	printf("Loading file: %s\n", argv[1]);
         	while((ilosclinii = fread(linia, 1 , group, plik))){
+			if(linia[0] != '\0' || linia[0] != '\n'){
 			printf("%08x :", poczatek);
 			for(i = 0; i < ilosclinii; i++){
 				if(i < group ){
@@ -43,7 +49,7 @@ int main(int argc, char *argv[]){
 			printf("\n");
 			poczatek = poczatek + group;
 		}	
-       
+		}
         printf("Closing file: %s\n", argv[1]);
         fclose(plik);
 	free(linia);

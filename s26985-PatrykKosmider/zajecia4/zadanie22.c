@@ -18,16 +18,30 @@ int main(int argc, char* argv[]){
 	}
 	if(!plik){
 		printf("Brak pliku\n");
-		return 0;
+		return 1;
 	}	
 	fscanf(plik, "%d", &liczba);
-	liczba = liczba + 1;
-	linie = malloc(liczba * sizeof(char *));	
-	for(i=0; i < liczba; i++){
-		linie[i] = malloc(1024 * sizeof(char));
-		fgets(linie[i], 1024, plik);
-		linie[i][strcspn(linie[i], "\n")] = 0;
+	linie = malloc(liczba * sizeof(char *));
+	if(linie == NULL){
+		printf("Blad alokacji pamieci\n");
+		return 1;
 	}
+	for(i = 0; i < liczba; i++){
+		linie[i] = malloc(1024 * sizeof(char));
+			if(linie[i] != NULL){
+				if(fgets(linie[i],1024,plik) != NULL){
+					if(linie[i][0] == '\n'){
+					free(linie[i]);
+					i--;
+					} else {
+						linie[i][strcspn(linie[i], "\n")] = 0;
+					}	
+				} else {
+					free(linie[i]);
+					i--;
+				}
+			}
+	}	
 	fclose(plik);
 	for(i = liczba - 1; i >= 0; i--){
 		printf("%s\n", linie[i]);
@@ -36,4 +50,3 @@ int main(int argc, char* argv[]){
 		free(linie);
 	return 0;
 }
-

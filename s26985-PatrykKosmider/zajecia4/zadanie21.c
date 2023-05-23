@@ -3,7 +3,7 @@
 int main(int argc, char* argv[]){
 	if(!plik){
 		printf("Brak Pliku");
-		return 0;
+		return 1;
 	} else {
 		FILE *plik = fopen(argv[1], "r");
 		char linia[10];

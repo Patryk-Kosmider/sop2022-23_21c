@@ -11,6 +11,10 @@ typedef struct wezel{
 void poczatekDane(wezel** lista){
 	int liczba;
 	wezel* noweDane = (wezel*)malloc(sizeof(wezel));
+	if(noweDane == NULL){
+		printf("Blad\n");
+		return;
+	}
 	wezel* poczatekwezel = *lista;
 	printf("Podaj dane: \n");
 	scanf("%d", &liczba);
@@ -24,14 +28,16 @@ void poczatekDane(wezel** lista){
 		poczatekwezel->wezelprzed = noweDane;
 	       *lista = noweDane;	
 	}
-	
-
 }
 
 
 void koniecDane(wezel** lista){
 	int liczba;
 	wezel* noweDane = (wezel*)malloc(sizeof(wezel));
+	if(noweDane == NULL){
+		printf("Blad\n");
+		return;
+	}
 	printf("Podaj dane: \n");
 	scanf("%d", &liczba);
 	noweDane->wezelprzed = NULL;
@@ -49,7 +55,6 @@ void koniecDane(wezel** lista){
 		ostatni->wezelpo = noweDane;
 		noweDane->wezelprzed = ostatni;
 	}
-
 }
 
 void wyswietldane(wezel* lista){
@@ -79,6 +84,16 @@ void usundane(wezel** lista, int dane){
 		*lista = po;
 	} else {
 		przed->wezelpo = po;
+	}
+	free(usun);
+}
+
+void freePamiec(wezel* lista){
+	wezel* freeDane = lista;
+	while(freeDane != NULL){
+	wezel* nastepny = freeDane->wezelpo;
+	free(freeDane);
+	freeDane = nastepny;
 	}
 }
 

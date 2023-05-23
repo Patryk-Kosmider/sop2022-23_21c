@@ -10,6 +10,10 @@ typedef struct wezel {
 void Dane(wezel** lista){
 	int liczba;
 	wezel *noweDane =(wezel*)malloc(sizeof(wezel));
+	if(noweDane == NULL){
+		printf("Blad");
+		return 1;
+	}
 	printf("Podaj dane: \n");
 	scanf("%d", &liczba);
 	noweDane->dane = liczba;
@@ -24,9 +28,6 @@ void Dane(wezel** lista){
 		}
 		ostatni->wezel2 = noweDane;
 	}
-
-
-
 	
 };
 
@@ -36,8 +37,6 @@ void wyswietldane(wezel* lista){
 		printf("%d\n", ostatni->dane);
 		ostatni = ostatni->wezel2;
 	}
-
-
 }
 
 
@@ -55,8 +54,15 @@ void usundane(wezel** lista, int dane){
 	} else {
 		dotylu->wezel2 = usun->wezel2;
 	}
+	free(usun);
 
-
+}
+void freePamiec(wezel* lista){
+	while(lista != NULL){
+		wezel *freeData = lista;
+		lista = lista->wezel2;
+		free(freeData);
+	}
 }
 
 int main(){
@@ -72,6 +78,7 @@ int main(){
 	usundane(&lista, usun);
 	printf("Dane po usunieciu: \n");
 	wyswietldane(lista);
+	freePamiec(lista);
 	return 0;
 
 }
