@@ -26,3 +26,9 @@ wymagające, ale robienie ich pozwala przyswoić wiedzę oraz sposób działania
 Na dzisiejszych zajęciach pojawił się temat zarządzania oraz tworzenia procesów w języku C. Sam koncept forkowanie procesów nie wydaję się ciężki, jednak problemy pojawiają się przy próbie jego prawidłowej implementacji, szczególnie
 gdy dochodzi do tworzenia własnego drzewa procesów. Temat wymaga przećwiczenia i wykonaniu trochę zadań, by zrozumieć go i w przyszlości poprawnie z niego korzystać. Zadania są na odpowiednim poziomie nauki, a temat został przestawiony
 w sposób przystępny.
+
+20.05.2023
+
+Na dzisiejszych zajęciach rozpoczęliśmy temat związany z socketami oraz sygnałami w C. Temat jest bardzo obszerny i tak na prawdę wymaga dużo czasu i zadań by w pełni go ogarnąć. Zadnia są również dosyć trudne i obszerne, więc
+trzeba było im poświęcić także dużo czasu na ich wykonanie i zrozumienie. Jednak taka wiedza jest przydatna i wydaję się "fajna". Temat został przedstawiony w sposób trochę przyszpieszone z powodu braku czasu, dlatego trzeba spojrzeć
+często do dokumentacji i innych źródeł.
