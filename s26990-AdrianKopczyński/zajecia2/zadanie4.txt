@@ -1,0 +1,4 @@
+Wyświetlenie poprzez $X powoduje, że wszystko wewnątrz zmiennej jest interpretowane jako osobny argument
+wynik polecenia ls -l, jest wyświetlany słowo po słowie, oddzielone spacją.
+Poprawnym użyciem byłoby echo "$X", powoduje to, że wartość zmiennej jest traktowana jako pojedynczy argument,
+dlatego wynik polecenie ls -l, jest wyswietlany dokladnie tak jak powinien, wraz zachowaniem znaków końca lini itp.

@@ -47,3 +47,14 @@ Uważam że pointery sprawiają mi jeszcze kłopoty
 
 Zaskaujące było jak prowadzący przedstawił dosyć złożony program z obsługą plików
 
+2023-05-19
+Mój kochany pamiętniczku na dzisiejszych zajeciach nauczylem sie:
+-podstaw jak działają procesy
+-bardziej skomplikowanch opcji vim'a
+-jakim pomocnym poleceniem jest man w linuxie
+
+Na zajęciach prowadzący przedstawił jak funkcjonują procesy i jak z nich korzystać w języku C, niektóre zadania wykonywaliśmy wspólnie.
+
+Uważam że muszę jeszcze poćwiczyć wykorzystywanie procesów
+
+Zaskakujące było jak procesy mogą wykonywać program

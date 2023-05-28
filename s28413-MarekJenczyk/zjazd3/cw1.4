@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $(ls | wc -l) -ge 5 ]; 
+then
+	echo "W bieżącym katalogu znajduje się więcej niż 5 plików"
+else
+	echo "W bieżącym katalogu znajduje się 5 lub mniej plików"
+fi
+

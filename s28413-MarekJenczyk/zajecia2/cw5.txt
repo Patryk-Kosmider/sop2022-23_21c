@@ -1,0 +1,22 @@
+5a)
+#!/bin/bash
+
+IMIE=$1
+if [[ $IMIE == *"a" ]];
+then
+#wariant jak imie jest kobiecie
+	echo "${IMIE} ma kota, kot ma ${IMIE:0:${#IMIE}-1}ę"
+else
+#jak nie kobiece to jest męskie
+	echo "${IMIE} ma kota, kot ma ${IMIE:0:${#IMIE}}a"
+fi
+
+
+5b)
+#!/bin/bash
+
+echo "Pierwszy znak argumentu: ${1:0:1}"
+
+echo "Ostatni znak argumentu: ${1: -1:1}"
+
+echo -e "${1//SOP/\\e[32mSOP\\e[0m}"

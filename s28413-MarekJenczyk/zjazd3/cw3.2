@@ -1,0 +1,21 @@
+#!/bin/bash
+
+fibonacci () {
+    e=$1
+	  fn=0
+	  if [ $e -eq 0 ]; then
+		    return 0
+	  elif [ $e -eq 1 ]; then
+		    return 1
+  	else
+		  a=0
+		  b=1
+		  $fn=((a + b))
+		  a=$(fibonacci $((e-1)))
+		  b=$(fibonacci $((e-2)))
+		  a=$b
+		   b=$fn
+		  echo $fn
+	  fi
+}
+

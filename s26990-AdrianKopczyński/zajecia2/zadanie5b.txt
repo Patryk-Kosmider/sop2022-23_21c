@@ -1,0 +1,8 @@
+#!/bin/bash
+text=$1
+length=${#text}
+start="${tekst:0:1}"
+end="${tekst: -1}"
+echo Pierwszy znak: ${start}
+echo Ostatni znak: ${end}
+echo -e "${text//SOP/\\e[32mSOP\\e[0m}"

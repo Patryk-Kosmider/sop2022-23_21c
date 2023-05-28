@@ -1,0 +1,20 @@
+A=Al
+echo ${A}a ma kota, a kot ma ${A}ę
+
+
+
+#!/bin/bash
+if [ $# -gt 1 ]; then
+	echo Za duza ilosc argumentow
+else
+	imie=$1
+	length=${#imie}
+	length=$(($length - 1))
+		if [ "${imie:$length}" == "a" ]; then
+			imie2="${imie::$length}ę"
+			echo ${imie} ma kota, a kot ma ${imie2}
+		else
+			imie2="${imie}a"
+			echo ${imie} ma kota, kot ma ${imie2}
+	fi
+fi

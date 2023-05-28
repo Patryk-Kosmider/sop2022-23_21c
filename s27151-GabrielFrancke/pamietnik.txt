@@ -10,3 +10,10 @@ Niestety podczas zajęć mogłem tylko zaznajomić się z zadaniami,
 bo niestety niestarczyło nam czasu na zajęciach by całkowicie pobrać system operacyjny jako maszynę wirtualną. 
 Więc niemaiałem środowiska w którym mógł bym rozwiązywać zadania. 
 Niemniej jednak postaram się je wykonywać w kompilatorze online i później na moim kopurze domowym
+
+
+2023-04-02
+Dzisiejsze zajęcia były bardzo pouczające. Dzięki nim:
+Opanowałem umiejętność wykorzystywania pętli "for".
+Zdobyłem wiedzę na temat tworzenia funkcji i ich użyteczności.
+Dowiedziałem się, jak efektywnie korzystać z tablic do przechowywania i manipulowania danymi.

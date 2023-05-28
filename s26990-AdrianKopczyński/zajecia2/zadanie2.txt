@@ -1,0 +1,12 @@
+1.Zmiennej X zostaje przypisana wartość "tekst",która zostaje wyświetlona polecianiem echo $X. Następnie polecenie 'bash' uruchamia drugą powłokę,
+jednak w niej zmienna X nie ma wartości, dlatego kolejne polecenie echo nie robi nic.
+
+2. Brakuje cudzysłowów, poprawny zapis: X="Tekst dłuższy" .
+
+3. Kiedy używamy "", znaki specjalne oraz zmienne są wykrywane, a jeśli użyjemy '' to wartość znajdująca się wewnątrz jest traktowana jako ciąg znaków, więc nie wykryje
+on zmiennych i nie zamieni ich na wartości jakie mają.
+
+
+4. 
+A=Ala
+echo "${A}a ma kota, a kot ma ${A}ę"

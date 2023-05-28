@@ -1,0 +1,67 @@
+1. Tworzenie maszyny w VM VirtualBox:
+  1.1 Tworzę nową wirturalną maszyne, kilikam "Nowa" oraz nadaje jej odpowiednią nazwę, jeśli wpisze np. "Win10" to automatycznie wybierze się Windows10, lecz ja chce debiana dlatego nazywam ją "deb..." i automatycznie wskakuje "Debian 64-bit".
+  1.2 Przy tworzeniu wirtualnej maszyny, muszę wybrać ilość RAM'u która zostanie przydziolna do maszyny. Trzeba wybrać rekomendowaną ilość, dla Debiana jest to 512MB ponieważ będę używać maszyny bez interfejsu graficznego. Ja dałem 1024MB, ponieważ jestem w stanie poświęcić trochę więcej z swoich zasobów na rzecz maszyny.
+  1.3 Przy tworzeniu muszę również wybrać rodzaj dysku dla maszyny. Są 3 opcje do wyboru: VDI, VHD, oraz VMDK
+  1.4 VDI - najbardziej kompatybilny format dysku, VHD - format dysku natywny dla oprogramowania wirtualizacyjnego VitrualPC, Hyper-V, VMDK - charakterystyczny dla oprogramowania wirtualizacyjnego VMware.
+  1.5 Później wybieram czy będzie dynamicznie przydzielało pamięć, czy stały rozmiar pamięci.
+    1.5.1 Dynamicznie przydzielanie - nie zabiera od razu całkowitej przestrzeni dyskowej, lecz tylko tyle ile jest potrzebyn
+    1.5.2 Stały rozmiar -  rezerwuję całą pamięć od razu na dsyku. Maszyna powinna działać szybciej
+  1.6 Wybieram by Dynamicznie przydziało, oraz w następnym kroku daje 4GB oraz zmieniam lokazliacje pliku, ponieważ niestety ale na wcześniej wybranym nie mam już miejsca :c. A 4GB dlatego, że jest to wyższe niż rekomendowane i również nie chce by zaraz maszyna miała jakiś problem i nie chciała się włączać itd.
+  1.7 Klikam utwórz, moja maszyna jest prawie gotowa do działania.
+  1.8 Prawie ponieważ wchodzę w opcje, patrzę jakie ustawienia są na tej maszynie. Np. w jakim miejscu znajdują się moje migawki, z których kiedyś bardzo dużo korzystałem
+  1.9 Ustawienie współdzielonego schowka oraz "Przeciągnie i upuszczanie" są ciekawymi i pomocnymi opcjami. Pozwala nam na kopiowanie z "naszego" komputera na naszą Wirtualną maszynę. Lecz by to ustawić potrzebujemy trochę pogrzebać np. zainstalowanie jakiś dodatków.
+  1.10 W "Opisie" możemy opisać naszą maszynę np. co na niej robiliśmy/do czego była nam potrzebna.
+  1.11 Również możemy włączyć szyfrowanie dysku lecz zmniejszy to wydajność maszyny.
+  1.12 W kolejnej sekcji "System" jest też bardzo wiele ciekawych opcji.
+   1.12.1 Wyłączam dyskietki oraz napęd optyczny z "Kolejności bootowania" bo no nie mam ich i nie będę z nich korzystał
+   1.12.1.1 Lecz pamiętam o tym, że jest możliwość skorzystania z "Jednorazowego skorzystania z płyty" gdzie pozwoli nam zainstalować system.
+   1.12.2 Ustawienie "Rozszerzone właściwości: Włącz I/O APIC" zostawiam właczone. Zadaniem APIC jest obsługa przewań sprzętowych.
+   1.12.3 Ustawienie "EFI" - Extended Firmaware Interface - EFI jest to bardziej rozszerzony, rozbudowany BIOS, który jest łączy system operacyjny ze sprzętem. Zostawiam tą opcję wyłączoną, ponieważ instalacja będzie trudniejsza i zależy mi na czasie.
+   1.12.4 Ustawienie "Czas zegara w UTC" - jest to po prostu ustawienie zegara.
+  1.13 w zakładce "Procesor" mogę dać więcej liczby procesorów, lecz nie zmieniam tego, 1 wystarczy, lecz wykorzystanie daje na 100%, żeby szybciej pracowało
+   1.13.1 Opcja "PAE/NX" - rozszerzenie przestrzeni adresowej, opcja używana przy 32-bit OS, lecz my mamy Debiana 64-bit więc opcja jest wyłączona.
+   1.13.2 Jako, że nie będę wirtualizował zwirtualiozowanej maszyny to opcje "Włącz zagnieżdzone VT-x/AMD-v zostawiam
+  1.14 Zakładka " Akceleracja" - ustawienie "Włącz zagnieżdone stronicowanie" jest włączona, przyśpiesza to działanie maszyny.
+  1.15 Zakładka "Ekran" kompletnie nic nie zmieniam, 16MB VRAM'u mi wystarczą tak samo jak kontroler grafiki VMSVGA
+   1.15.1 Nie włączam "Zdalnego pulpitu" oraz nagrywania ponieważ ani jedno ani drugie nie jest mi potrzebne.
+  1.16 Zakładka "Pamięć" - Mozemy dodać kontrolery, ISO, dyski. Można też wybrać w jaki port chcemy by to było.
+  1.17 Zakładka "Dźwięk" - wyłączam tą opcję, ponieważ nie będę korzystał z dźwięku w Debianie.
+  1.18 Zakładka "Sieć" - Mamy dostępne 4 kart sieciowe, ja ustawian tylko jedną Karte włączoną. Ustawiam jako "Podłączona do: NAT", działa to tak, że mój komputer robi za router i jak maszyna robi coś w internecie to sieć widzi to jako mój komputer a nie jako maszyne wirtualną i jak maszyna dostaję jakieś pakiety to również przechodzi przez mój komputer, działa to jak taka brama oraz można u ustawieniach zaawansowanych ustwaić Adres MAC wirtualnej sieciówki.
+   1.18.1 "Modyfikowana karta sieciowa" - oznacza, że maszyna będzie równoprawna w sieci, dostanie również IP jak mój komputer.
+   1.18.2 "Sieć wewnętrzna" - oznacza połaczenie maszyn witrualnych by siebie widziały, trzeba tylko tak samo wypełnic nazwe
+   1.18.3 "Karta sieci izolowanej" - oznacza to, że mój komputer może się komunikować z kartą sieciówą maszyny
+  1.19 Zakładka "Porty szeregowe" - 4 dostępne porty, wszystkie pozostawiam wyłączone
+  1.20 Zakładka "USB" - zostawiam włączone po to by moja mayszka czy klawiatura działała, można dodać również inne urządzenia np. kamera
+  1.21 Zakładka "Udostępniane foldery" - pozwala na udostępnienie z mojego komputera np. folderu który pojawi się na maszynie
+  1.22 W zakładke "Interfejs użytkownika" nie wszedłem bo nic tam nie chce zmieniać.
+  1.23 W KOŃCU MOGĘ ODPALIĆ MASZYNE!!!
+  
+2. Instalowanie Debiana:
+  2.1 Uruchomiłem maszynę, ukazuję się instalator debiana, do wyboru kilka opcji:
+  2.1.1 Graphical Install - graficzny interfejs, więcej pobierania zasobów, a tego nie chce.
+  2.1.2 W Advanced Options, możemy ujrzeć jeszcze kilka opcji:
+  2.1.2.1: Graphical exper install - większa konfiguracja Debiana w graficznym interfejsie
+  2.1.2.2 Graphical recue mode - gdy system się zepsuję, pozwala nam go naprawić w interfejsie graficznym
+  2.1.2.3 Graphical automated install - instualuje sie automatycznie na kilku urządzieniach w takiej samej konfiguracji. Trzeba tylko zrobić plik konfiguracyjny.
+  2.1.2.4 Expert install - większa konfiguracja Debiana, lecz bez interfejsu graficznego
+  2.1.2.5 Rescue mode - gdy system się zepsuje, pozwala nam go naprawić, ale bez interfesju graicznego
+  2.1.2.6 Automated install - instaluje sie automatycznie to samo co w 2.1.2.3 ale też bez interfejsu graficznego
+  2.1.2.7 Speech-enabled advenced options - syntezator mowy dla osób niedowidzących
+  
+  2.2 Musze wybrać, jednorazowo bootowanie z napędu optycznego, ISO Debiana, po resecie, wciskam f12 i klikam c by wybrać wcześniej wspomniane bootwanie z płyty
+  2.3 Wybieram "Instalacje tekstową", ponieważ nie tracić zasobów na graficznym
+  2.4 Oczywiście, wybieram język angielski, by przy jaki
+  2.5 Lokalizacja - "Europe", i później "Poland"
+  2.6 Język klawiatury - "American/English"
+  2.7 Hostname i Domain name pozostawiam puste, ponieważ, nie posiadam domeny, ustwiam moje ulubione hasło rootowi, ustawiam nazwę użytkownikowi i dajhe mu hasło, oczywiście inne niż Root'owi
+  2.8 Całe miejsce na dysku przypisuję na jednej partycji, ponieważ nigdy więcej i tak virtualki nie odpale
+  2.9 -Use entire disk and set up LVM - oznacza, że możemy utworzyć partycję na cały dysk z LVM, który odpowiwada za zarządzanie przestrzenią
+  2.10 - Use enitre disk and set up encrypted LVM - oznacza to samo co wyżej tylko jest szyfrowane
+  2.11 Wybieram Ext4 jako system plików, najnowsza i najlepsza wersja
+  2.12 Nie chce wybrać żadnej płyty, więc pomijam opcje jej wybrania
+  2.13 Mirror Server, oczywiście daje na PG, najbliżej więc najszybciej (ftp.task.gda.pl)
+  2.14 Nie chce i nie potrzebuję proxy, więc pomnijam
+  2.15 Nie chce żeby zabierało mi statystyyki więc daje na nie
+  2.16 Software pozostawiam domyślnie, a no i instuluje jeszcze serwer SSH
+  2.17 Żeby uruchomić system instaluje boot loadera GRUB
+  2.18 W końcu koniec męczarni

@@ -1,0 +1,2 @@
+Powinno być "$X", ponieważ samo wywołanie $X spowoduję, że i ls i -l będzie interpretowane jako osoby argument
+a tak to wyświetli się dobrze i tak jak powininien 

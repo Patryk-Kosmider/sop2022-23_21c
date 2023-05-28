@@ -1,0 +1,52 @@
+2.1
+
+#/bin/bash
+
+for i in {10..1..2}; do
+	  echo $i
+done
+
+2.2
+
+#/bin/bash
+
+for i in "$@"; do
+	  echo "$i"
+done
+
+2.3
+
+#/bin/bash
+
+IFS='\n'
+for i in $(ls); do
+	  echo "Patrzcie panstwo, oto plik: $i"
+done
+
+2.4
+
+#!/bin/bash
+
+for i in *; do
+    if [[ $i =~ .c$ ]]; then
+		    file="${i%.*}"
+		    cc "$i" -o "$file"
+	  fi
+done
+
+2.5
+
+#!/bin/bash
+
+tab=("$@")
+for file in "${tab[@]}"; do
+    echo "Zawartosc pliku $file od pczatku do konca:"
+    cat "$file"
+    echo
+done
+
+for file in "${tab[@]}"; do
+    echo "Zawartosc pliku $file od konca do poczatku:"
+    tac "$file"
+    echo
+done

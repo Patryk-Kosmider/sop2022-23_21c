@@ -1,0 +1,16 @@
+cw2.1  #komenda bash, w 3 linice otwiera nowego shella, gdzie $X nie jest zdefiniowany
+
+cw2.2
+Tekst wpisany w zmienną X powinień być w cudzysłowiach by cały tekst został przypisany.
+
+X=Tekst dłuższy                    X="Tekst dłuższy"  
+                      ----->   
+echo $X                            echo $X
+
+cw2.3
+Różnica pomiędzy " a ' jest taka, że cudzysłow (") odczytuje zmienne czy znaki tak jak podany w przykładzie $X
+a apostrofy (') nic nie interpretują tylko po prostu czytają tak jak jest 
+
+cw2.4
+By wszystko ładnie działało powinno być:
+echo ${A}a ma kota, a kot ma ${A}ę

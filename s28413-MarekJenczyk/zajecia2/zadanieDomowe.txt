@@ -1,0 +1,6 @@
+#!/bin/bash
+
+IMIE=Marek
+PLIK=$1
+
+cat "$PLIK" | sed "s/$IMIE/$(echo -e '\e[31m'$IMIE'\e[0m')/g"

@@ -1,0 +1,6 @@
+PATH - lista katalogów posiadających pliki wykonywalne, nie musimy do poleceń podawać całej scieżki do pliku wykonywalnego. 
+RANDOM - losowa liczba całkowita od 0 do 32767, przydasię do generowania wartości pseudolosowych w skrypcie.
+PWD - scieżka do bieżącego miejsca w systemie w jakim w danym momencie jesteśmy w terminalu. Przyda się żeby upewnić się w jakim miejscu w systemie plików się znajdujemy.
+USER - nazwa obecnego użytkownika, możeby zebrać nazwy użytkowników, którzy wykonają skrypt.
+HOSTNAME - nazwa komputera widoczna w sieci, przydaje się gdy chcemy pobrać tę wartość skryptem na różnych komputerach.
+OSTYPE - typ systemu operacyjnego, możemy zebrać dane o systemach, na których będzie puszczony skrypt.

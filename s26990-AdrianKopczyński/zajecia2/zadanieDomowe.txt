@@ -1,0 +1,15 @@
+#!/bin/bash
+
+file="$1"
+
+if [ ! -f "$file" ]; then
+  echo "Plik $file nie istnieje."
+  exit 1
+fi
+
+red=$(tput setaf 1)
+reset=$(tput sgr0)
+
+while IFS= read -r line; do
+  echo "$line" | sed "s/Adrian/${red}Adrian${reset}/g"
+done < "$file"

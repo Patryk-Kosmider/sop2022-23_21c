@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Witamy w termianlu"
+#wypisuje "Witamy w teminalu"
